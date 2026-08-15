@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F7F6F3" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Star Security Agency — Security Guards & Armed Gunmen</title>
+    <meta
+      name="description"
+      content="Trained, uniformed security guards and licensed armed gunmen deployed across offices, factories, banks, societies and events in India."
+    />
+    <script>
+      // FOUC prevention: honour a saved preference; default to light.
+      (function () {
+        try {
+          var saved = localStorage.getItem('star-security-theme');
+          if (saved === 'dark' || saved === 'light') {
+            document.documentElement.dataset.theme = saved;
+            return;
+          }
+        } catch (e) {}
+        document.documentElement.dataset.theme = 'light';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
